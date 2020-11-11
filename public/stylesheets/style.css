@@ -1,0 +1,49 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+form.text {
+    position: relative;
+    top: 100px;
+    border: black 1px solid;
+    border-radius: 15px;
+    width: 55%;
+    height: 500px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+
+#text-title {
+    position: relative;
+    left: 41%;
+}
+#number {
+    width: 70%;
+    position: relative;
+    top: 10px;
+    left: 20%;
+}
+
+
+#message {
+    width: 55%;
+    position: relative;
+    top: 215px;
+    left: 10%;
+}
+
+
+#submit {
+    position: relative;
+    top: 160px;
+    left: 70%;
+    width: 10%;
+}
