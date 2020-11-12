@@ -32,18 +32,25 @@ h1 {
     left: 20%;
 }
 
+.conversation {
+    width: 80%;
+    position: relative;
+    left: 10%;
+    top: 50px;
+    height: 200px;
+}
 
 #message {
     width: 55%;
     position: relative;
-    top: 215px;
+    top: 100px;
     left: 10%;
 }
 
 
 #submit {
     position: relative;
-    top: 160px;
+    top: 43px;
     left: 70%;
     width: 10%;
 }

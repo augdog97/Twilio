@@ -6,7 +6,9 @@ const bodyParser = require('body-parser');
 
 const indexRouter = require('./routes/index-router');
 
-
+app.use(express.static('public'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 /* View Engine */
 const ejs = require('ejs');
 app.set('view engine', 'ejs');
@@ -17,9 +19,8 @@ app.use('/', indexRouter);
 
 
 
-app.use(express.static('public'));
-app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+
+
 
 
 app.get('*', (req, res) => {
