@@ -25,22 +25,22 @@ var client = new twilio(accountSid, authToken);
 
 /* GET home page */
 router.get('/',  async (req, res, next) => {
-  const url_api = 'https://api.twilio.com/2010-04-01/Accounts/{Account Sid}/Messages/{Message Id}';
+  const url_api = 'https://api.twilio.com/2010-04-01/Accounts/{Account Sid}/Messages/SM025191920c117b50102d09f0c1200ed3.json';
  
  
   /* Test */
   const test = 'https://httpbin.org/get'
 
   try {
-    await fetch(test)
-      .then(res => res.json())
-      .then(data => {
-        const ip = data.origin;
-        console.log(ip);
-        res.render('index', {
-          ip: ip
-        }); 
+    client.messages('SMf7d80de1af092b32a805774c42a2e973')
+      .fetch()
+      .then(messages => {
+        const messagesId = messages.body;
+         res.render('index', {
+          messagesId: messagesId
+        });
       })
+        
   } catch (error) {
     console.log(error);
   }
