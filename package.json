@@ -5,17 +5,20 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
+    "watch": "nodemon --ignore public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "August Shah",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "connect-livereload": "^0.6.1",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "http-errors": "^1.8.0",
     "jquery": "^3.5.1",
+    "livereload": "^0.9.1",
     "node-fetch": "^2.6.1",
     "nodemon": "^2.0.6",
     "requirejs": "^2.3.6",

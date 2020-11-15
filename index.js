@@ -2,7 +2,9 @@ const express = require('express')
 const app = express()
 const port = 3000
 const bodyParser = require('body-parser');
-
+var path = require('path');
+const livereload = require("livereload");
+const connectLivereload = require("connect-livereload");
 
 const indexRouter = require('./routes/index-router');
 
@@ -14,13 +16,18 @@ const ejs = require('ejs');
 app.set('view engine', 'ejs');
 
 
+const liveReloadServer = livereload.createServer();
+liveReloadServer.watch(path.join(__dirname, 'views'));
+
+app.use(connectLivereload());
+liveReloadServer.server.once("connection", () => {
+    setInterval(() => {
+        liveReloadServer.refresh("/");
+    }, 1000);
+});
+
+
 app.use('/', indexRouter);
-
-
-
-
-
-
 
 
 app.get('*', (req, res) => {

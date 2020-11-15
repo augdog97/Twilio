@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Meta tag reloads page every second, need easier way to do it.
+    <meta http-equiv="refresh" content="1" /> -->
     <title>BootStrap Start</title>
    
         <!-- Bootstrap Link -->
@@ -49,7 +51,7 @@
 
         <div class="row contact-row" id="contact-row-id">
             <div class="col-xs col-sm col-md col-lg col-xl contact-container" id="contact-container-id">
-                <div class="form" data-aos="fade-right" data-aos-duration="3000" data-aos-easing="linear">
+                <div class="form">
                     <form method="POST" action="/" id="text" class="text">
                         <div class="form-group">
                             <h1>Have a conversation with anyone! </h1>
@@ -59,7 +61,7 @@
                             <br>
                                 <div class="form-control conversation " id="conversation">
                                         <% if(messagesId !== null)  {%>
-                                        <div class="messagesId"> 
+                                        <div class="messagesId" id="messagesId"> 
                                             <%= messagesId %>
                                         </div>
                                         <% } %>
