@@ -53,4 +53,12 @@ h1 {
     top: 43px;
     left: 70%;
     width: 10%;
+    border: 1px solid black;
+    border-radius: 15px;
+    background: linear-gradient(to right, blue, white);
+}
+
+.messagesId {
+padding-left: 85%;
+padding-top: 5%;
 }

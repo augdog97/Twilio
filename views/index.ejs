@@ -9,6 +9,9 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
             integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
             <link rel="stylesheet" href="/stylesheets/style.css">
+
+            <!-- Font awesome-->
+            <script src="https://kit.fontawesome.com/595056b4d4.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -56,13 +59,20 @@
                             <br>
                                 <div class="form-control conversation " id="conversation">
                                         <% if(messagesId !== null)  {%>
-                                       <%= messagesId %>
+                                        <div class="messagesId"> 
+                                            <%= messagesId %>
+                                        </div>
                                         <% } %>
+                                        <div class="sentId" id="sentId">
+                                            
+                                        </div>
+                                        
                                 </div>
                             
                             <input class="form-control" type="text" name="message" id="message" required>
                         </div>
-                        <input class="form-control btn" type="submit" value="Send" id="submit">
+                            <input class="form-control btn" type="submit" value="Send" id="submit" onclick="test()">
+                        
                     </form>
                 </div>
         

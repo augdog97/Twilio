@@ -1,3 +1,13 @@
+/* TASK LIST 
+1. Get the value of the number field in the get route for the number field
+2. Style Chat form to have desired look
+3. Render the message sent FROM the Twilio number TO another number */
+
+
+
+
+
+
 /* Imports */
 var express = require('express');
 var router = express.Router();

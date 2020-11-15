@@ -17,6 +17,8 @@ $('#text').on('submit', function (e) {
         number: number
     };
 
+ 
+
     $.ajax({
         type: "POST", // HTTP method POST or GET
         url: "/", //Where to make Ajax calls
@@ -27,5 +29,12 @@ $('#text').on('submit', function (e) {
             alert("Text has sent");
 
         }
-    });
+    })
+ 
 });
+function test() {
+    const messageInput = document.getElementById('message').value;
+    const messageField = document.getElementById('sentId');
+
+    messageField.innerHTML = messageInput;  
+} 
