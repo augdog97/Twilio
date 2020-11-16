@@ -26,19 +26,21 @@ var authToken = process.env.AUTH_TOKEN;   // Your Auth Token from www.twilio.com
 
 /* Creating boilerplate Twilio */
 var twilio = require('twilio');
-const { data } = require('jquery');
-const { render } = require('ejs');
 var client = new twilio(accountSid, authToken);
 
 
 
 /* GET home page */
-router.get('/', async (req, res, next) => {
-
+router.get('/',  (req, res, next) => {
+/* try getting the message from the number that was input into the number field on the form. res.json.number and get the most recent message. 
+  then render that mesage in the index view.
+  m.body is capturing the body of the message in a variable to be used in the EJS template
+  if there is an error then log the error to the console
+  */
   try {
-    client.messages
+     client.messages
       .list({
-        from: '+17185412931',
+        from: res.json.number,
         limit: 1
       })
       .then(messages => messages.forEach(m => 
@@ -56,6 +58,10 @@ router.get('/', async (req, res, next) => {
 /*Twilio 
 1. Create a message on Twilio and send the message
 2. The body is JSON from the AJAX request 
+  - Using interpolation to capture the value of the message and number variable from the ajax request.
+  - the Twilio phone number is saved in an environment file
+3. Console log the ID of the message that was sent
+4. next() moves down to the next POST route
 */
 router.post('/', (req, res, next) => {
 
@@ -70,10 +76,11 @@ router.post('/', (req, res, next) => {
 
 
 })
-
+/* THIS ROUTE IS NOT REQUIRED: when a message is received it logs the id of that message to the console. */
 router.post('/',  (req, res) => {
   const sid = req.body.SmsSid;
   console.log(sid);
 })
 
+/* export the router */
 module.exports = router;

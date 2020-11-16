@@ -60,11 +60,9 @@
                             <input class="form-control" type="text" name="number" id="number" required>
                             <br>
                                 <div class="form-control conversation " id="conversation">
-                                        <% if(messagesId !== null)  {%>
-                                        <div class="messagesId" id="messagesId"> 
-                                            <%= messagesId %>
-                                        </div>
-                                        <% } %>
+                                 <!-- including the message.ejs partial file so we can dynmially reload that part of the page-->
+                                       <%-  include('message.ejs') -%> 
+                                       <!-- The div where the senders message goes after message is sent-->
                                         <div class="sentId" id="sentId">
                                             
                                         </div>

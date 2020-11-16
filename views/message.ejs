@@ -1,12 +1,13 @@
 
     
+<!-- Using EJS template to render the messagesID variable from the GET route in Index-router.js
+  if the variable is not equal to null then render the message in the div-->
 
-
-            <div class="form-control conversation " id="conversation" >
-                
-                    <%= ip %> 
-                  
-                </div>
+            <% if(messagesId !== null)  {%>
+            <div class="messagesId" id="messagesId">
+                <%= messagesId %>
+            </div>
+            <% } %>
 
 
 

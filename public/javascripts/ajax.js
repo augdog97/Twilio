@@ -6,6 +6,7 @@
  * run an AJAX Post request that stringifys the JSON
  */
 
+ /* the test function captures the value of the message that was input into the message input field and puts that into the messageField div (sentId) */
 
 function test() {
     const messageInput = document.getElementById('message').value;
