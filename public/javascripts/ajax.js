@@ -45,9 +45,5 @@ $("document").ready(function () {
     });
    
 });
-/* Auto fresh part of page, it works but the div is now showing 
-setInterval("my_function();", 1000);
-function my_function() {
-    $('#messagesId').load(location.href + ' #conversation'); 
-} */
+
 
