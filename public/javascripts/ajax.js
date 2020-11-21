@@ -48,3 +48,8 @@ $("document").ready(function () {
 });
 
 
+
+/* Shows the Bootstrap modal on page load */
+$(document).ready(function () {
+    $("#modal").modal('show');
+});

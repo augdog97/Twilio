@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Meta tag reloads page every second, need easier way to do it.
-    <meta http-equiv="refresh" content="1" /> -->
-    <title>BootStrap Start</title>
+    <!--Meta tag reloads page every second, need easier way to do it. 
+    <meta http-equiv="refresh" content="1; url=/" /> -->
+    <title>Twilio SMS Chat app</title>
    
         <!-- Bootstrap Link -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
             integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+           
             <link rel="stylesheet" href="/stylesheets/style.css">
 
             <!-- Font awesome-->
@@ -17,6 +18,24 @@
 </head>
 
 <body class="d-flex flex-column h-100">
+    <div class="modal" id="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">App Disclaimer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>This is a proof of concept SMS chat app. The app is fully functional. The UI/UX is very simple. This project was built using Agile methodology. This app does have a feature roadmap, but due to other projects future feature updates may not be put into place. </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
         <!-- Fixed navbar -->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -52,6 +71,8 @@
         <div class="row contact-row" id="contact-row-id">
             <div class="col-xs col-sm col-md col-lg col-xl contact-container" id="contact-container-id">
                 <div class="form">
+                    <p id="intro"> Use this app to send a message using the Twilio API. As of now in order to receive a message sent back to
+                        the Twilip API the page has to be refreshed. THE APP WILL NOT REFRESH AUTOMATICALLY. Use this app responsibly!!</p>
                     <form method="POST" action="/" id="text" class="text">
                         <div class="form-group">
                             <h1>Have a conversation with anyone! </h1>
