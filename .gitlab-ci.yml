@@ -1,0 +1,30 @@
+image: node:latest
+
+before_script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+   # - npm link @angular/cli
+
+stages:
+  #  - test
+    - production
+
+
+# unit-test:
+   # stage: test
+   # image: trion/ng-cli-karma:latest
+   # script:
+     #   - npm install 
+    #    - ng test 
+  #  only:
+ #       - master
+
+production:
+    type: deploy
+    stage: production
+    image: ruby:latest
+    script:
+        - dpl --provider=heroku --app=$HEROKU_APP_PRODUCTION --api-key=$HEROKU_API_KEY
+    only:
+        - master
