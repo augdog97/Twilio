@@ -25,7 +25,6 @@ production:
     stage: production
     image: ruby:latest
     script:
-        - npm install
         - echo "ACCOUNT_SID=$ACCOUNT_SID" >> .env
         - echo "AUTH_TOKEN=$AUTH_TOKEN" >> .env
         - echo "API_KEY=$API_KEY" >> .env
