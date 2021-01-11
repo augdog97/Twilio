@@ -26,7 +26,7 @@ production:
     image: ruby:latest
     script:
         - echo -e "ACCOUNT_SID=${ACCOUNT_SID} \n" >> .env
-        - echo -e "AUTH_TOKEN =${AUTH_TOKEN } \n" >> .env
+        - echo -e "AUTH_TOKEN =${AUTH_TOKEN} \n" >> .env
         - echo -e "API_KEY=${API_KEY} \n" >> .env
         - echo -e "API_SECRET=${API_SECRET} \n" >> .env
         - echo -e "PHONE_NUMBER =${PHONE_NUMBER} \n" >> .env
