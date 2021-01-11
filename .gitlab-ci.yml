@@ -31,6 +31,6 @@ production:
         - echo "API_SECRET=$API_SECRET" >> .env
         - echo "PHONE_NUMBER=$PHONE_NUMBER" >> .env
         - echo "sengrid_api=$sengrid_api" >> .env
-        - dpl --provider=heroku --app=$HEROKU_APP_PRODUCTION --api-key=$HEROKU_API_KEY
+        - dpl --provider=heroku --app=$HEROKU_APP_PRODUCTION --api-key=$HEROKU_API_KEY --skip_cleanup
     only:
         - master
