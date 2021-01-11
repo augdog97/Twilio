@@ -1,9 +1,10 @@
-This is a simple web app that uses the Twilio API and Bootstrap. 
+
+ * This is a simple web app that uses the Twilio API and Bootstrap. 
 You can send a message to any phone number and when the person reponds their message will render on the page.
 This app is SIMPLE which means the functionality is just proof of concept nothing more. There is a possibility to add a login feature, 
 getting rid of the last message received after a session ends, modern styling of the app. 
 
-This app is to help those who are wanting to learn more about the Twilio api and how to use it in a simple manner. When working on this project I found that there was not alot of documentation on what I was trying to achieve, so I posted the solution with notes so those who are wanting the same goal can do so easily. 
+ * This app is to help those who are wanting to learn more about the Twilio api and how to use it in a simple manner. When working on this project I found that there was not alot of documentation on what I was trying to achieve, so I posted the solution with notes so those who are wanting the same goal can do so easily. 
 The codebase is well documented for those who want to follow along. 
 
 # INSTALL Steps: 
