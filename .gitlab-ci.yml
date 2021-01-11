@@ -25,12 +25,12 @@ production:
     stage: production
     image: ruby:latest
     script:
-        - echo -e "ACCOUNT_SID=${ACCOUNT_SID} \n" >> .env
-        - echo -e "AUTH_TOKEN =${AUTH_TOKEN} \n" >> .env
-        - echo -e "API_KEY=${API_KEY} \n" >> .env
-        - echo -e "API_SECRET=${API_SECRET} \n" >> .env
-        - echo -e "PHONE_NUMBER =${PHONE_NUMBER} \n" >> .env
-        - echo -e "sengrid_api =${sengrid_api} \n" >> .env
+        - echo --env "ACCOUNT_SID=${ACCOUNT_SID} \n" >> .env
+        - echo --env "AUTH_TOKEN =${AUTH_TOKEN} \n" >> .env
+        - echo --env "API_KEY=${API_KEY} \n" >> .env
+        - echo --env "API_SECRET=${API_SECRET} \n" >> .env
+        - echo --env"PHONE_NUMBER =${PHONE_NUMBER} \n" >> .env
+        - echo --env"sengrid_api =${sengrid_api} \n" >> .env
         - dpl --provider=heroku --app=$HEROKU_APP_PRODUCTION --api-key=$HEROKU_API_KEY
     only:
         - master
