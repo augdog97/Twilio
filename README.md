@@ -16,7 +16,7 @@ The codebase is well documented for those who want to follow along.
 * ngrok is used to connect the local host to the API. To install ngrok visit the link below, make an account, and follow download instructions. 
 link: https://ngrok.com/
 
-Technologies used: 
+# Technologies used: 
 1. HTML
 2. CSS
 3. Javascript
