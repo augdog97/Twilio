@@ -4,7 +4,6 @@ before_script:
     - apt-get update -qy
     - apt-get install -y ruby-dev
     - gem install dpl
-    - npm install
    # - npm link @angular/cli
 
 stages:
@@ -32,6 +31,7 @@ production:
         - echo "API_SECRET=$API_SECRET" >> .env
         - echo "PHONE_NUMBER=$PHONE_NUMBER" >> .env
         - echo "sengrid_api=$sengrid_api" >> .env
+        - npm install
         - dpl --provider=heroku --app=$HEROKU_APP_PRODUCTION --api-key=$HEROKU_API_KEY --skip_cleanup
     only:
         - master
