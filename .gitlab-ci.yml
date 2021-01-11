@@ -23,7 +23,6 @@ stages:
 production:
     type: deploy
     stage: production
-    image: ruby:latest
     script:
         - echo -e "ACCOUNT_SID=${ACCOUNT_SID} \n" >> .env
         - echo -e "AUTH_TOKEN =${AUTH_TOKEN} \n" >> .env
