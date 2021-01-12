@@ -1,36 +1,32 @@
+# This file is how to deploy to heroku with API keys with creating a .env file
+# Create all env variables and values in Gitlab
+
 image: node:latest
 
 before_script:
     - apt-get update -qy
     - apt-get install -y ruby-dev
     - gem install dpl
-   # - npm link @angular/cli
+   
 
 stages:
-  #  - test
+  
     - production
 
 
-# unit-test:
-   # stage: test
-   # image: trion/ng-cli-karma:latest
-   # script:
-     #   - npm install 
-    #    - ng test 
-  #  only:
- #       - master
+
 
 production:
     type: deploy
     stage: production
     image: ruby:latest
     script:
-        - echo  -e "ACCOUNT_SID=$ACCOUNT_SID \n" >> .env
-        - echo  -e "AUTH_TOKEN=$AUTH_TOKEN \n" >> .env
-        - echo  -e "API_KEY=$API_KEY \n" >> .env
-        - echo  -e "API_SECRET=$API_SECRET \n" >> .env
-        - echo  -e "PHONE_NUMBER=$PHONE_NUMBER \n" >> .env
-        - echo  -e "sengrid_api=$sengrid_api \n" >> .env
+        - echo   "ACCOUNT_SID=$ACCOUNT_SID" >> .env
+        - echo   "AUTH_TOKEN=$AUTH_TOKEN" >> .env
+        - echo   "API_KEY=$API_KEY" >> .env
+        - echo   "API_SECRET=$API_SECRET" >> .env
+        - echo   "PHONE_NUMBER=$PHONE_NUMBER" >> .env
+        - echo    "sengrid_api=$sengrid_api" >> .env
         - dpl --provider=heroku --app=$HEROKU_APP_PRODUCTION --api-key=$HEROKU_API_KEY --skip_cleanup
     only:
         - master

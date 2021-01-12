@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000 // must be this way for deployment
 const bodyParser = require('body-parser');
 var path = require('path');
 const livereload = require("livereload");
